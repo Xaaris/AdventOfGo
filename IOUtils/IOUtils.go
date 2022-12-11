@@ -36,6 +36,10 @@ func ReadInputRunes(path string) [][]rune {
 	return mapToRunes(ReadInputStrings(path))
 }
 
+func ReadInputDigits(path string) [][]int {
+	return mapToDigits(ReadInputStrings(path))
+}
+
 func mapToInt(strings []string) []int {
 	ints := make([]int, len(strings))
 
@@ -58,4 +62,19 @@ func mapToRunes(strings []string) [][]rune {
 	}
 
 	return runes
+}
+
+func mapToDigits(strings []string) [][]int {
+	ints := make([][]int, len(strings))
+	for i := range ints {
+		ints[i] = make([]int, len(strings[0]))
+	}
+
+	for i, s := range strings {
+		for j, r := range s {
+			ints[i][j], _ = strconv.Atoi(string(r))
+		}
+	}
+
+	return ints
 }
