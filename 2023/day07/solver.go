@@ -391,8 +391,8 @@ func main() {
 	day := "day07"
 	exampleResult := solve1("2023/" + day + "/example.txt")
 	fmt.Printf("expected: %d, got %d\n", 6440, exampleResult)
-	//result1 := solve1("2023/" + day + "/data.txt")
-	//fmt.Printf("Result 1: %d\n", result1)
+	result1 := solve1("2023/" + day + "/data.txt")
+	fmt.Printf("Result 1: %d\n", result1)
 
 	exampleResult = solve2("2023/" + day + "/example.txt")
 	fmt.Printf("expected: %d, got %d\n", 5905, exampleResult)
